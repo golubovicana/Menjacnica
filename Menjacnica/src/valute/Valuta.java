@@ -14,36 +14,42 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv == null || naziv.isEmpty()) throw new RuntimeException("Greska u unosu imena");
 		this.naziv = naziv;
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if(naziv == null || naziv.isEmpty()) throw new RuntimeException("Greska u unosu skracenog imena");
 		this.skraceniNaziv = skraceniNaziv;
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum == null) throw new RuntimeException("Greska u unosu datuma");
 		this.datum = datum;
 	}
 	public double getProdajni() {
 		return prodajni;
 	}
 	public void setProdajni(double prodajni) {
+		if(prodajni <= 0) throw new RuntimeException("Greska u unosu prodajnog kursa");
 		this.prodajni = prodajni;
 	}
 	public double getSrednji() {
 		return srednji;
 	}
 	public void setSrednji(double srednji) {
+		if(srednji <= 0) throw new RuntimeException("Greska u unosu srednjeg kursa");
 		this.srednji = srednji;
 	}
 	public double getKupovni() {
 		return kupovni;
 	}
 	public void setKupovni(double kupovni) {
+		if(kupovni <= 0) throw new RuntimeException("Greska u unosu kupovnog kursa");
 		this.kupovni = kupovni;
 	}
 	
